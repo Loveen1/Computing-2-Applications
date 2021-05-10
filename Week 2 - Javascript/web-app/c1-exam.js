@@ -14,9 +14,23 @@ const Exam = Object.create(null);
 //    for example:
 //      an input list of [1,2,3,4,5,6,7,8]
 //      returns [1,4,7]
-Exam.every_third = function () {
-    return;
+Exam.every_third = function (input_list) {
+    let count = 1;
+    let list = [];
+    let i;
+    For (i = 0; i < input_list.length; i+=1) {
+        if (count % 3 === 0) {
+        list.push(input_list[i]);
+        } else {
+        count = count + 1 ;
+        }
+    }
+    return list;
 };
+
+console.log(Exam.every_third([1,2,3,4,5,6,7,8]));
+
+// code isnt working its returning me 3,4,5,6,7,8
 
 
 // Strings
@@ -29,7 +43,23 @@ Exam.every_third = function () {
 //       the input sentences "the cow jumped over the moon" and
 //                            "jack and jill went up the"
 //       returns "the jack cow and jumped jill over went the up moon the"
-Exam.merge_sentences = function () {
+Exam.merge_sentences = function (sentence1, sentence2) {
+    
+    sent1 = sentence1.trim()
+    sent2 = sentence2.trim()
+    let i;  
+    new_sentence = ''
+
+    if (sentence1.split(" ").length!=sentence1.split(" ").length) {
+        throw Error("ValueError")
+    }
+    for (i of Array(sent1.length).keys()){
+        if (i != sent2.length) {
+            new_sentence = 
+        }
+    }
+
+    
     return;
 };
 
@@ -38,7 +68,9 @@ Exam.merge_sentences = function () {
 //     for example:
 //          the input "sPonGe bOb"
 //          returns 6
-Exam.lowercase_count = function () {
+Exam.lowercase_count = function (input_string) {
+    input_string.replace(/[^A-Z]/g, "").length
+    
     return;
 };
 
