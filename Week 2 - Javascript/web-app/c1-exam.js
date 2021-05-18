@@ -14,28 +14,13 @@ const Exam = Object.create(null);
 //    for example:
 //      an input list of [1,2,3,4,5,6,7,8]
 //      returns [1,4,7]
-<<<<<<< HEAD
-Exam.every_third = function (input_list) {
-    let count = 1;
-    let list = [];
-    let i;
-    For (i = 0; i < input_list.length; i+=1) {
-        if (count % 3 === 0) {
-        list.push(input_list[i]);
-        } else {
-        count = count + 1 ;
-        }
-    }
-    return list;
-=======
-Exam.every_third = function (array) {
-    return array.filter((ignore, k) => k % 3 === 0);
->>>>>>> 5373bb6eadabff1e404f7556ebf74ce6e6afa5e2
-};
 
-console.log(Exam.every_third([1,2,3,4,5,6,7,8]));
+// Exam.every_third = function (array) {
+//     return array.filter((ignore, k) => k % 3 === 0);
+// };
 
-// code isnt working its returning me 3,4,5,6,7,8
+
+// console.log(Exam.every_third([1,2,3,4,5,6,7,8]));
 
 
 // Strings
@@ -50,72 +35,66 @@ console.log(Exam.every_third([1,2,3,4,5,6,7,8]));
 //       returns "the jack cow and jumped jill over went the up moon the"
 Exam.merge_sentences = function (sentence1, sentence2) {
     
-    sent1 = sentence1.trim()
-    sent2 = sentence2.trim()
-    let i;  
-    new_sentence = ''
+    const sent1 = sentence1.split(" "); //used to split a string into an array of substrings, everytime a space is seen it will separate it.
+    const sent2 = sentence2.split(" ");
+    const combined = sent1.map( (x, index) => x + " " + sent2[index]); //for the same index in sentence 1 we will map it to same index in sentence 2
 
-    if (sentence1.split(" ").length!=sentence1.split(" ").length) {
-        throw Error("ValueError")
-    }
-    for (i of Array(sent1.length).keys()){
-        if (i != sent2.length) {
-            new_sentence = 
-        }
-    }
-
-    
-    return;
+    const final = combined.reduce((acc, current) => acc + " " + current);
+    return final;
 };
+
+
+
 
 // Write a function that returns the number of lowercase letters in
 // input string.
 //     for example:
 //          the input "sPonGe bOb"
 //          returns 6
+
 Exam.lowercase_count = function (input_string) {
-    input_string.replace(/[^A-Z]/g, "").length
-    
-    return;
+    const filtered = input_string.split("").filter((char) => char.match(/[a-z]/));
+    return filtered.length;
 };
 
 
-// Objects
+// // Objects
 
-// Write a function that returns the longest a key in the input object
-// whose keys are all strings.
-Exam.longest_key = function () {
-    return;
+// // Write a function that returns the longest a key in the input object
+// // whose keys are all strings.
+Exam.longest_key = function ( acc, cur) {
+    return
 };
 
-// Write a function that returns the largest value that is an even value in the
-// input dictionary whose values are all whole numbers.
-Exam.value_greatest_even = function () {
-    return;
-};
+// // Write a function that returns the largest value that is an even value in the
+// // input dictionary whose values are all whole numbers.
+// Exam.value_greatest_even = function () {
+//     return;
+// };
 
 
-// Arguments
+// // Arguments
 
-// Write a function with two input arguments "username" and "location".
-// The function should return text "Hello, {name}, how is {location}?".
-//
-// The username argument should not be set to a default,
-// but the location argument should default to "London".
-Exam.greeting = function () {
-    return;
-};
+// // Write a function with two input arguments "username" and "location".
+// // The function should return text "Hello, {name}, how is {location}?".
+// //
+// // The username argument should not be set to a default,
+// // but the location argument should default to "London".
+// Exam.greeting = function () {
+//     return;
+// };
 
 
-// Write a function three input arguments,
-// the first one, x, is required and the second two are
-// the following keywords with default values:
-//     scalar with a default of 1
-//     offset with a default of 0
-// The function returns the calculation x * scalar + offset for the input x
-// if the output value of the calculation is positive, otherwise it returns 0.
-Exam.floor_line = function () {
-    return;
-};
+// // Write a function three input arguments,
+// // the first one, x, is required and the second two are
+// // the following keywords with default values:
+// //     scalar with a default of 1
+// //     offset with a default of 0
+// // The function returns the calculation x * scalar + offset for the input x
+// // if the output value of the calculation is positive, otherwise it returns 0.
+// Exam.floor_line = function () {
+//     return;
+// };
 
-export default Object.freeze(Exam);
+// export default Object.freeze(Exam);
+// */
