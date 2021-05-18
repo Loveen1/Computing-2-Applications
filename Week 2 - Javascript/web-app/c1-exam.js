@@ -15,13 +15,9 @@ const Exam = Object.create(null);
 //      an input list of [1,2,3,4,5,6,7,8]
 //      returns [1,4,7]
 
-// Exam.every_third = function (array) {
-//     return array.filter((ignore, k) => k % 3 === 0);
-// };
-
-
-// console.log(Exam.every_third([1,2,3,4,5,6,7,8]));
-
+Exam.every_third = function (array) {
+    return array.filter((ignore, k) => k % 3 === 0);
+};
 
 // Strings
 
@@ -44,8 +40,6 @@ Exam.merge_sentences = function (sentence1, sentence2) {
 };
 
 
-
-
 // Write a function that returns the number of lowercase letters in
 // input string.
 //     for example:
@@ -62,9 +56,16 @@ Exam.lowercase_count = function (input_string) {
 
 // // Write a function that returns the longest a key in the input object
 // // whose keys are all strings.
-Exam.longest_key = function ( acc, cur) {
-    return
+Exam.longest_key = function (object) {
+    arrayKeys = Object.keys(object); 
+    reduced = arrayKeys.reduce((acc, cur){
+        if (acc.length > cur.length){
+            return cur 
+        }
+    })
 };
+
+
 
 // // Write a function that returns the largest value that is an even value in the
 // // input dictionary whose values are all whole numbers.
