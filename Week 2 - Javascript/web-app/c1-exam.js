@@ -97,5 +97,6 @@ Exam.longest_key = function (object) {
 //     return;
 // };
 
-// export default Object.freeze(Exam);
-// */
+export default Object.freeze(Exam);
+
+//this allows you to use these functions in a different file. 
